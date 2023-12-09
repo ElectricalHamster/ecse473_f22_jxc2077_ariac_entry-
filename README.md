@@ -1,5 +1,5 @@
 # ecse473_f23_jxc2077_ariac_entry
-###use `roslaunch ariac_entry entry.launch` to launch it.
+### use `roslaunch ariac_entry entry.launch` to launch it.
 project is based on the information available from the ARIAC website, https://bitbucket.org/osrf/ariac/wiki/2019/documentation
 
 launch files:
@@ -11,7 +11,7 @@ This launch file runs the ecse_473_ariac.launch that also starts the competition
 Main function:
 The functionality will be to move the manipulator over each part in a bin and back using a call to the Action Server interface.
 
-###We first create a Trigger object, then call it using a ServiceClient. if the serivce is started successfully, you  can see a ROS info saying:
+### We first create a Trigger object, then call it using a ServiceClient. if the serivce is started successfully, you  can see a ROS info saying:
 
 ROS_INFO("Competition service called successfully
 But if it failed, it will be following information.
@@ -28,8 +28,8 @@ We use  the size of shipment and product vector to determain when we can finish 
 
 The Service GetMaterialLocations is run to find the locations where a product type is. And according to the type information in product vector, we can find its pose.
 
-###It works similarly to Trigger, expect the topic we service is /ariac/material_locations.The locations of the products are found using the 10 logical cameras. 
-###One for each of the six bins, two for the agvs, and two for quality. We used 10 callback to get their information.
+### It works similarly to Trigger, expect the topic we service is /ariac/material_locations.The locations of the products are found using the 10 logical cameras. 
+### One for each of the six bins, two for the agvs, and two for quality. We used 10 callback to get their information.
 
 Joint trajectories define how the robot moves. A trajetory conists of seven positions per point.
  Each point is a location the arm moves towards a destination, making them waypoints. 
