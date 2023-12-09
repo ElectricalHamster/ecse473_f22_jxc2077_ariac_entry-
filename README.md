@@ -1,12 +1,12 @@
-# ecse373_f22_yxw2389_ariac_entry
+# ecse473_f23_jxc2077_ariac_entry
 ###use `roslaunch ariac_entry entry.launch` to launch it.
 project is based on the information available from the ARIAC website, https://bitbucket.org/osrf/ariac/wiki/2019/documentation
 
 launch files:
-ecse_373_ariac.launch
-The ecse_373_ariac.launch file is to start the environment and ables the start of competition, it contains the needed information about using pockage ecse_373_ariac.
+ecse_473_ariac.launch
+The ecse_473_ariac.launch file is to start the environment and ables the start of competition, it contains the needed information about using pockage ecse_473_ariac.
 entry.launch
-This launch file runs the ecse_373_ariac.launch that also starts the competition.
+This launch file runs the ecse_473_ariac.launch that also starts the competition.
 
 Main function:
 The functionality will be to move the manipulator over each part in a bin and back using a call to the Action Server interface.
