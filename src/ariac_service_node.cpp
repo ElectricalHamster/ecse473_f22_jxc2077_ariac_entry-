@@ -159,50 +159,6 @@ joint_trajectory.points[1].positions[0] = joint_current.position[1];
   follow_joint_trajectory.publish(joint_trajectory);
 }
 
-
-//void end_effector(double T_pose, double q_pose, sensor_msgs::JointState joint_current)
-//{
-  // Where is the end effector given the joint angles.
-  // joint_states.position[0] is the linear_arm_actuator_joint
-  //q_pose[0] = joint_current.position[1];
-  //q_pose[1] = joint_current.position[2];
-  //q_pose[2] = joint_current.position[3];
-  //q_pose[3] = joint_current.position[4];
-  //q_pose[4] = joint_current.position[5];
-  //q_pose[5] = joint_current.position[6];
-  //ur_kinematics::forward((float *)&q_pose, (double *)&T_pose);
-//}
-
-//void joint_angles(double T_des, double q_des, trajectory_msgs::JointTrajectory desired)
-//{
-  // What joint angles put the end effector at a specific place.
-  // Desired pose of the end effector wrt the base_link.
-  //T_des[0][3] = desired.pose.position.x;
-  //T_des[1][3] = desired.pose.position.y;
-  //T_des[2][3] = desired.pose.position.z + 0.3; // above part
-  //T_des[3][3] = 1.0;
-  // The orientation of the end effector so that the end effector is down.
-  //T_des[0][0] = 0.0; T_des[0][1] = -1.0; T_des[0][2] = 0.0;
-  //T_des[1][0] = 0.0; T_des[1][1] = 0.0; T_des[1][2] = 1.0;
-  //T_des[2][0] = -1.0; T_des[2][1] = 0.0; T_des[2][2] = 0.0;
-  //T_des[3][0] = 0.0; T_des[3][1] = 0.0; T_des[3][2] = 0.0;
-  //int num_sols = ur_kinematics::inverse((double *)&T_des, (double *)&q_des);
-//}
-
-// This callback is called when a goal becomes active.
-//void goalActiveCallback() {
-
-//}
-// This callback is called when feedback is provided
-//void feedbackCallback(const control_msgs::JointTrajectoryFeedbackConstPtr& fb) {
-
-//}
-// This callback is called when the action is complete and provides the result
-//void resultCallback(const control_msgs::JointTrajectoryResultConstPtr& res) {
-
-//}
-
-
 int main(int argc, char **argv)
 {
   ros::init(argc, argv, "service_node");
